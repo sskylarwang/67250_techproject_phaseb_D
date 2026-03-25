@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Skylar Wang">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>Tickets | MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        </header>
+
+        <nav class="nav_bar" id="navbar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <button class="hamburger" onclick="toggleHamburger()" aria-label="Toggle navigation">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h2>Buy Tickets</h2>
+            <p>
+            Purchase your admission online before arriving for a faster, smoother museum visit.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Adult</td>
+                    <td>General admission for ages 18 and over. Under 18 free of charge.</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Student ID required</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>Member ID required</td>
+                    <td>$15</td>
+                </tr>
+            </table>
+
+            <h2>April Ticket Schedule</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Availability</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>April 15, 2026</td>
+                    <td>Available</td>
+                    <td><button type="button" onclick="revealPurchaseForm('April 15, 2026')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 16, 2026</td>
+                    <td>Available</td>
+                    <td><button type="button" onclick="revealPurchaseForm('April 16, 2026')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 22, 2026</td>
+                    <td>Available</td>
+                    <td><button type="button" onclick="revealPurchaseForm('April 22, 2026')">Buy Now</button></td>
+                </tr>
+            </table>
+
+            <form id="purchaseForm" onsubmit="handlePurchaseSubmit(event)">
+                <h2>Purchase Form</h2>
+                <p id="dateDisplay" class="date-note"></p>
+
+                <p>
+                    <label for="buyerName">Name:</label><br>
+                    <input type="text" id="buyerName" name="buyerName" required>
+                </p>
+
+                <p>
+                    <label for="buyerEmail">Email:</label><br>
+                    <input type="email" id="buyerEmail" name="buyerEmail" required>
+                </p>
+
+                <p>
+                    <label for="ticketCount">Number of Tickets:</label><br>
+                    <input type="number" id="ticketCount" name="ticketCount" min="1" max="10" required>
+                </p>
+
+                <p>
+                    <label for="selectedDate">Selected Date:</label><br>
+                    <input type="text" id="selectedDate" name="selectedDate" readonly>
+                </p>
+
+                <p>
+                    <input type="submit" value="Submit Order">
+                </p>
+            </form>
+            
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+</body>
+</html>
