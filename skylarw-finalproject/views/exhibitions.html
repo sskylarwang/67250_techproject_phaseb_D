@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Skylar Wang">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>Exhibitions | MonoMuse</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        </header>
+
+        <nav class="nav_bar" id="navbar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <button class="hamburger" onclick="toggleHamburger()" aria-label="Toggle navigation">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h2>Current Exhibitions</h2>
+            <p>
+            Our exhibitions are thoughtfully curated to highlight unique perspectives,
+            innovative techniques, and meaningful narratives. Each exhibition invites
+            visitors to engage deeply with art and its context.
+            </p>
+
+            <h3>Featured Exhibitions</h3>
+            <p>
+            “Reframing Reality” explores how artists reinterpret everyday life through
+            digital and mixed media, challenging perceptions and encouraging reflection.
+            </p>
+
+            <p>
+            "Signal / Noise" examines how modern life is shaped by data streams, notifications, and
+            constant connectivity. The exhibition invites visitors to reflect on how technology
+            affects attention, memory, and communication.
+            </p>
+
+            <h3>Museum Video</h3>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/j8bXKzkq0Tk?si=8J7rX7NqJMHDOpt_" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+</body>
+</html>

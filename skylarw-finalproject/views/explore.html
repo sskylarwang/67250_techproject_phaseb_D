@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Skylar Wang">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>Explore | MonoMuse</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        </header>
+
+        <nav class="nav_bar" id="navbar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <button class="hamburger" onclick="toggleHamburger()" aria-label="Toggle navigation">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h2>Mission Statement</h2>
+            <p>
+                MonoMuse explores the relationship between art, technology, and society. Our mission is
+                to make contemporary art approachable, interactive, and meaningful for a broad range of
+                visitors through exhibitions, installations, and educational programming.
+            </p>
+
+            <h2>Who We Serve</h2>
+            <p>
+                MonoMuse welcomes first-time visitors, students, families, artists, researchers, and
+                returning members. We aim to create a space where visitors can engage with digital
+                culture, experimentation, and creative expression.
+            </p>
+
+            <h2>Milestones</h2>
+            <ul>
+                <li>2016: MonoMuse opens with its first digital storytelling exhibition.</li>
+                <li>2018: Launches interactive media lab for visitors and schools.</li>
+                <li>2023: Expands gallery space and introduces international collaborations.</li>
+            </ul>
+
+            <!-- Leaflet Map Container -->
+            <div id="map"></div>
+
+        </main>
+
+        <figure class="main_img">
+            <img src="../static/museum.jpg" alt="Exterior view of the MonoMuse contemporary museum building">
+        </figure>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+</body>
+</html>
