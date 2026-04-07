@@ -61,7 +61,9 @@ img {
 .nav_bar {
   grid-area: nav_bar; 
   display: flex;
-  justify-content: right;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 nav a {
